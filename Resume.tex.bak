@@ -1,0 +1,234 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\thispagestyle{empty} %隐藏页码
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+%\pagenumbering{arabic}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[4]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \upshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip
+			{#3}\\ \smallskip
+			{#4}\smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Chang Liwei}{http://www.liwill.net/}{lwchang@126.com}{(+86) 138 0819 3489}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Objective
+\header{Objective}
+
+\begin{body}
+	\vspace{14pt}
+	Technology Solution Professional
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{M.S. Electronic and Communication Engineering }{} \hfill \emph{July  2013}{} \\
+	\emph{University of Electronic Science and Technology of China}, Chengdu, Sichuan \\
+  \medskip
+	\textbf{B.S. Communication Engineering} \hfill \emph{July 2009} \\
+	\emph{Taiyuan University of Technology}, Taiyuan, Shanxi\\
+\end{body}
+
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\header{Research Fields}
+\begin{body}
+    \vspace{14pt}
+    \textbf{Cloud Computing, Virtualization, Network Virtualization, Datacenter Network}
+\end{body}
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Project Experience}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Research on Xen Performance Testing}, \emph{Key Laboratory of Optical Fiber Sensing and Communication, Ministry of Education } \\
+  \hfill \emph{August 2011 - December 2011}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Benchmark Xen Virtualization Performance under Different CPU Schedule
+        \item Compile and Patch Linux Kernel 2.6x to Support Xen Hypervisor
+        \item Benchmark Web Server to Measure Server Utilization
+	\end{itemize}
+
+	\textbf {Development and Operation on OpenStack}, \emph{Key Laboratory of Optical Fiber Sensing and Communication, Ministry of Education }\\
+ \hfill \emph{February 2012 - Now}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Devopt Mulit-node OpenStack Architecture
+		\item Monitor on OpenStack Cluster
+        \item OpenStack Compute Node High Available Study, Using Pacemaker
+	\end{itemize}
+
+    \textbf {Ryu Network Operation System in OpenStack}, \emph{IDC, Shanghai Jiao Tong University} \\ \hfill \emph{June 2012 - September 2012}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Devopt Ryu Network Operation System in OpenStack
+		\item Research on Ryu OpenFlow Controller
+        \item Implement with Ryu to Function GRE Overlay Network in OpenStack
+	\end{itemize}
+ \textbf {Huawei-Quanutm VPN-TE Features  Extension}, \emph{ Huawei Technologies Co., Ltd} \\ \hfill \emph{September 2012 - January 2013}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Architecture Design
+		\item Design of Quantum Plugin RESTful API Extension
+        \item Development of Plugin and Document Management
+	\end{itemize}
+\end{body}
+
+\smallskip
+
+% \newpage{} % uncomment this line if you want to force a new page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Publications
+%\header{Selected Publications}
+
+%\begin{body}
+%	\vspace{14pt}
+%	Seth Holloway. ``\textbf{Writing Resumes in LaTeX},'' in \emph{Proceedings of the Mind %of Seth Holloway}. 2011.\\
+%	\smallskip
+%	Seth Holloway, Andrea Holloway. ``\textbf{Accent Modification Rules},'' in %\emph{Proceedings of Fun}. 2008.\\
+%\end{body}
+
+%\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{Skills}
+
+\begin{body}
+	\vspace{14pt}
+	\emph{\textbf{Programming:}}{} C/C++, MatLab, SQL, Python, Bash Shell  \\
+	\emph{\textbf{Operating Systems:}}{} Windows, Linux(Ubuntu, RHEL,.etc)\\
+    \emph{\textbf{Server Virtualization :}}{} Xen, KVM, VMware\\
+    \emph{\textbf{Network :}}{} TCP/IP, OpenFlow, Open vSwitch\\
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Leadership
+\header{Language Ability}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{CET-6}, Fluent in Writing, Speaking, Reading and Translation $E=mc^{2}$ and $Node_{2}$
+	\smallskip
+	
+\end{body}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and Honors
+\header{Awards and Honors}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Master Scholarship}, School of Communication \& Information Engineering  \hfill {} \emph{2010}\\
+	\smallskip
+	\textbf{Master Scholarship}, School of Communication \& Information Engineering  \hfill {} \emph{2011}\\
+\smallskip
+\end{body}
+\begin{tabular}{|p{7.5cm}|}
+    \hline\\
+\hspace{2em}for $j = 1$, $2$, $\ldots$, $N_r$\\
+\hspace{4em}$\bm{G} = \bm{\Phi}$\\
+\hspace{4em}$\bm{r} = \widetilde{\bm{Y}_j}$\\
+\hspace{4em}$m \leftarrow 1$\\
+\hspace{4em}while $\| \bm{r} \| > \sigma_n^2$\\
+\hspace{6em}$\bm{q} = \bm{G}^H \bm{r}$\\
+\hspace{6em}$k_m = \mathop {\arg \max }\limits_l  {|{q}_{l}|^2}/{\| \bm{g}_{
+l} \|}$\\
+\hspace{6em}$\bm{r} = \bm{r} - {(\bm{g}_{k_m}^{H} \bm{r}) \bm{g}_{k_m}}/{\|
+\bm{g}_{k_m} \|}$\\
+\hspace{6em}$h = {\bm{g}_{k_m}^{H} \bm{r}}/{\| \bm{g}_{k_m} \|}$\\
+\hspace{6em}$m \leftarrow m+1$\\
+\hspace{4em}next\\
+\hspace{2em}next $j$\\\\
+   \hline
+\end{tabular}
+
+\end{document}
